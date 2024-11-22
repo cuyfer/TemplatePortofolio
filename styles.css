@@ -1,16 +1,20 @@
+/* Import font dari Google Fonts buat nambahin gaya tulisan keren */
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dancing+Script:wght@400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
 
+/* Reset semua padding margin dll biar rapi */
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
   
+/* Setting background item gelap + font default */
 body{
     background-color: rgb(13, 13, 13);
     font-family: "Open Sans", sans-serif;
 }
 
+/* Bikin navbar jadi flex + atur posisi konten */
 nav{
     display: flex;
     justify-content: space-between;
@@ -20,6 +24,7 @@ nav{
     padding: 20px;
 }
 
+/* Styling link di navbar */
 nav a{
     text-decoration: none;
     color: white;
@@ -30,10 +35,12 @@ nav a{
     font-size: 1rem;
 }
 
+/* Kasih garis bawah biru buat menu aktif */
 nav .aktif{
     border-bottom: rgb(58, 123, 189) 2px solid;
 }
 
+/* Styling logo di navbar */
 nav .logo{
     color: rgb(66, 66, 244);
     font-weight: bold;
@@ -43,15 +50,17 @@ nav .logo{
     transition: all 0.5s ease;
 }
 
+/* Warna putih buat teks logo */
 nav .logo p{
     color: white;
 }
 
+/* Efek hover di menu navbar */
 nav a:hover{
     border-bottom: rgb(58, 123, 189) 2px solid;
-
 }
 
+/* Layout section utama pake flex */
 section{
     display: flex;
     flex-direction: column;
@@ -61,15 +70,18 @@ section{
     text-align: center;
 }
 
+/* Atur lebar konten utama */
 .content{
     width: 50%;
     margin-top: 3rem;
 }
 
+/* Bikin foto profil jadi bundar */
 section .foto img{
     border-radius: 50%;
 }
 
+/* Nambahin background blur biru di belakang */
 section::before{
     position: absolute;
     background-color:rgb(28, 104, 170) ;
@@ -84,21 +96,24 @@ section::before{
     animation: bg 2s ease forwards;
 }
 
+/* Styling judul about */
 #about{
     margin:10px 0 ;
     font-size:1.5em ;
 }
 
+/* Ukuran teks deskripsi */
 .sub p{
     font-size: 15px;
 }
 
-
+/* Warna highlight buat nama */
 .fulan {
     color: rgb(69, 160, 239) ;
     font-weight: bold;
 }
 
+/* Layout icon sosmed */
 .media{
     display: flex;
     justify-content: center;
@@ -106,20 +121,24 @@ section::before{
     color: white;
 }
 
+/* Styling container icon */
 .media .icon{
     margin-top: 20px;
     cursor: pointer;
     margin-right: 10px;
 }
 
+/* Efek hover di icon */
 .media .icon svg:hover {
     color: rgb(69, 160, 239) ;
 }
 
+/* Animasi navbar */
 .animasi-nav{
     animation: nav var(--durasi, 1s) ease-in 1 forwards;
 }
 
+/* Durasi animasi navbar */
 .animasi-nav-2{
     --durasi: 4s
 }
@@ -132,6 +151,7 @@ section::before{
     --durasi:4s
 }
 
+/* Keyframe animasi navbar */
 @keyframes nav {
     0%{
         opacity: 0;
@@ -145,6 +165,7 @@ section::before{
     }
 }
 
+/* Animasi foto */
 .animasi-foto{
     animation: foto var(--durasiAnimasi, 1s) ease forwards;
 }
@@ -153,6 +174,7 @@ section::before{
     --durasiAnimasi: 3s;
 }
 
+/* Keyframe animasi foto */
 @keyframes foto {
     0%{
         opacity: 0;
@@ -164,6 +186,7 @@ section::before{
     }
 }
 
+/* Keyframe animasi background */
 @keyframes bg {
     0%{
         opacity: 0;
@@ -173,6 +196,7 @@ section::before{
     }
 }
 
+/* Animasi teks */
 .animasi-text{
     animation: teks var(--durasiTeksAnimasi, 3s) ease forwards;
 }
@@ -181,6 +205,7 @@ section::before{
     --durasiTeksAnimasi:4s;
 }
 
+/* Keyframe animasi teks */
 @keyframes teks {
     0%{
         transform: translateY(-20%);
@@ -191,7 +216,7 @@ section::before{
     }
 }
 
-
+/* Keyframe animasi icon */
 @keyframes icons {
     0%{
         transform: scale(0);
@@ -203,6 +228,7 @@ section::before{
     }
 }
 
+/* Animasi tiap icon dengan durasi berbeda */
 .animasi-icon{
     animation: icons var(--durasiIcon, 1s) ease forwards;
 }
@@ -227,6 +253,7 @@ section::before{
     animation: icons var(--durasiIcon, 7s) ease forwards;
 }
 
+/* Responsive buat layar hp */
 @media screen and (max-width: 768px) {
     #about{
         font-size: 15px;
