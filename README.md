@@ -16,4 +16,4 @@ Repositori ini berfungsi sebagai contoh dan panduan untuk membuat website portof
 
 1. **Clone Repositori**: 
    ```bash
-   git clone 
+   git clone https://github.com/Adyfas/TemplatePortofolio.git
